@@ -1,0 +1,5 @@
+#Yaml File
+
+baseDir: /Users/msaini/Documents/qaperfai/src/main/resources/
+maxTime: 30000
+captureInterval: 5
