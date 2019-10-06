@@ -1,6 +1,7 @@
 package com.qaperf.ai.parser;
 
 import com.qaperf.ai.command.ProcessData;
+import com.qaperf.ai.utils.Settings;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -8,7 +9,7 @@ import java.io.File;
 public class PythonParserThread implements Runnable {
     public final static Logger LOG= Logger.getLogger(PythonParserThread.class);;
     private String datasetLocation;
-    private String parser_file = System.getProperty("user.dir")+ File.separator + "%s";
+    private String parser_file = System.getProperty("user.dir")+ File.separator + Settings.pythonFolderName +File.separator +"%s";
     private String command="python %s %s %s ";
     private boolean printToConsole=false;
     private String actionName;
