@@ -17,18 +17,17 @@ public class App
         WebDriver driver= action.openBrowser();
         action.beginTransaction();
         action.beginStep("Navigate to URL");
-        driver.get("http://www.ankpro.com");
 
-       driver.navigate().to("https://34.222.81.56:8443/auth/realms/cdpe2e-dflt-acnt-mow-dev-realm/protocol/saml/clients/samlclient");
+         driver.navigate().to("");
         action.endStep();
        // driver.manage().window().maximize();
         Thread.sleep(5000);
         action.beginStep("Enter Username and password");
         action.setWebPageName("LoginPage");
-        action.findElement(By.name("username_")).sendKeys("cdpe2edevuser@keycloak.com");
-        driver.findElement(By.name("password")).sendKeys("password");
+        action.findElement(By.name("username_")).sendKeys("");
+        driver.findElement(By.name("password")).sendKeys("");
         action.startTestAction("click login",driver);
-        driver.findElement(By.id("kc-login")).click();
+        driver.findElement(By.id("login")).click();
         action.measureActionPerformance(driver);
         action.endTestAction();
         action.endStep();
