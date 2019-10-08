@@ -208,43 +208,10 @@ public class TransactionUtils {
                 .replaceAll("_{2}", "_").replaceAll("contains", "_contains").replaceAll("_$", "");
     }
 
-    public  String getTestFileName() {
-        StackTraceElement[] callingStack = Thread.currentThread().getStackTrace();
-        String className = "";
-        for (int i = 1; i < callingStack.length; i++) {
-            if (!callingStack[i].getClassName().contains("com.qaperf.ai")) {
-                className = callingStack[i].getClassName();
-                break;
-            }
-        }
-        return className;
-
-    }
 
 
-    /**
-     * Save the GUI of the current driver instance in a file name identified by
-     * filename.
-     *
-     * @param d
-     * @param filename
-     * @throws AWTException
-     * @throws HeadlessException
-     * @throws IOException
-     */
-    public static void saveScreenshot(WebDriver d, String filename) {
 
-        File screenshot = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
-        File destFile = new File(filename);
 
-        try {
-            FileUtils.copyFile(screenshot, destFile);
-            screenshot = destFile;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
 
 
 

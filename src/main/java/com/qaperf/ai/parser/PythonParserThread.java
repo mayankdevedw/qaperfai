@@ -13,10 +13,7 @@ public class PythonParserThread implements Runnable {
     private String command="python %s %s %s ";
     private boolean printToConsole=false;
     private String actionName;
-    private String fullImage;
-    private String visualImage;
-    private String annotateImage;
-    private String pythonScript;
+
 
 
 

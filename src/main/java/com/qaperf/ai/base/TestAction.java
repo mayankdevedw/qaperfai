@@ -1,6 +1,6 @@
 package com.qaperf.ai.base;
 
-import com.qaperf.ai.dataset.SetDataForWebPage;
+import com.qaperf.ai.xpathparser.SetDataForWebPage;
 import com.qaperf.ai.learn.TreePathStructureLearn;
 import com.qaperf.ai.measure.ScreenShotDriver;
 import com.qaperf.ai.measure.ScreenShotFlag;

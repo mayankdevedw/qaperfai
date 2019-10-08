@@ -148,7 +148,7 @@ public class ComputerVision {
 
         Set<Point> allMatches = new HashSet<>();
 
-        /* run SIFT and FAST to check for the presence/absence of the template image. */
+        /* TODO run SIFT and FAST to check for the presence/absence of the template image. */
         boolean isPresent = true;
 
         if (isPresent) {
@@ -193,7 +193,7 @@ public class ComputerVision {
         if (matches.size() == 0) {
             LOG.error("WARNING: No matches found!");
         } else if (matches.size() > 1) {
-            LOG.error("WARNING: Multiple matches: " + matches.size());
+            LOG.error("WARNING: Multiple matches Found : " + matches.size());
         }
 
         MinMaxLocResult mmr = Core.minMaxLoc(result);
